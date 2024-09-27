@@ -1,0 +1,365 @@
+{
+	"info": {
+		"_postman_id": "81f27a1c-e95d-49c0-bbb6-15905c7098d8",
+		"name": "UserProductCrud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37826376"
+	},
+	"item": [
+		{
+			"name": "User Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "Sandipto",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "jesus.sandy95@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "user_image",
+							"type": "file",
+							"src": "/C:/Users/user/Pictures/Swasth_Rakshak/Doctor_Images/image1.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:6500/user/postregdata",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6500",
+					"path": [
+						"user",
+						"postregdata"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Mail Confirmation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6500/user/mail_confirmation/jesus.sandy95@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6500",
+					"path": [
+						"user",
+						"mail_confirmation",
+						"jesus.sandy95@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "jesus.sandy95@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:6500/user/postlogdata",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6500",
+					"path": [
+						"user",
+						"postlogdata"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find User Details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRGF0YSI6eyJfaWQiOiI2NmY1MWUxZmUzYzQ2NmYzMjhjNzE1OWMiLCJ1c2VybmFtZSI6InNhbmRpcHRvIiwiZW1haWwiOiJqZXN1cy5zYW5keTk1QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJhJDEyJGo4Y3UxT1R3WlZHbS5KVnp0eS5TemV3NENsVmxaRU5RVmdKZXVWOERERVltRDdiSUtjVTBDIiwidXNlcl9pbWFnZSI6ImltYWdlMS5qcGciLCJpc1ZlcmlmeSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyNC0wOS0yNlQwODo0MTowMy4zODdaIiwidXBkYXRlZEF0IjoiMjAyNC0wOS0yNlQwODo0MjoyNS4wMzRaIn0sImlhdCI6MTcyNzM0MTg4NiwiZXhwIjoxNzI3MzQ1NDg2fQ.lY0FHQuY8AHhKF_tinEICNw8RY_Xo4PaYC1uhUCDtCs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:6500/user/getuserdata",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6500",
+					"path": [
+						"user",
+						"getuserdata"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "Soumyadip",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "jesus.sandy95@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "654321",
+							"type": "text"
+						},
+						{
+							"key": "user_image",
+							"type": "file",
+							"src": "/C:/Users/user/Pictures/Swasth_Rakshak/Doctor_Images/image3.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:6500/user/updateuserdata/66f51e1fe3c466f328c7159c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6500",
+					"path": [
+						"user",
+						"updateuserdata",
+						"66f51e1fe3c466f328c7159c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "categoryName",
+							"value": "Large Appliance",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:6500/category/postdetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6500",
+					"path": [
+						"category",
+						"postdetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "category_id",
+							"value": "66f53bd4cce7947d7ade0289",
+							"type": "text"
+						},
+						{
+							"key": "product_name",
+							"value": "Refrigerator",
+							"type": "text"
+						},
+						{
+							"key": "product_price",
+							"value": "43000",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "6",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:6500/product/postproductdata",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6500",
+					"path": [
+						"product",
+						"postproductdata"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Category Aggregation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6500/agg/productcategorydata",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6500",
+					"path": [
+						"agg",
+						"productcategorydata"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Category Grouping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6500/agg/productcategorygroup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6500",
+					"path": [
+						"agg",
+						"productcategorygroup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "category_id",
+							"value": "66f53bd4cce7947d7ade0289",
+							"type": "text"
+						},
+						{
+							"key": "product_name",
+							"value": "Washing Machine",
+							"type": "text"
+						},
+						{
+							"key": "product_price",
+							"value": "38000",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:6500/product/editproduct/66f53d52cce7947d7ade028b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6500",
+					"path": [
+						"product",
+						"editproduct",
+						"66f53d52cce7947d7ade028b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6500/product/deleteproduct/66f53d52cce7947d7ade028b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6500",
+					"path": [
+						"product",
+						"deleteproduct",
+						"66f53d52cce7947d7ade028b"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
